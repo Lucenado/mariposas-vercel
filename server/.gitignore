@@ -1,3 +1,4 @@
 /node_modules
 /fischer.db
 /features importantes.txt
+.env
