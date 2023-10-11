@@ -15,7 +15,7 @@ function Catalogue() {
   const scrollRef = useRef([]);
 
   useEffect(() => {
-    fetch('http://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_getAll', { 
+    fetch('https://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_getAll', { 
       method: 'get', 
       headers: {
           'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -31,7 +31,7 @@ function Catalogue() {
       )
     })
 
-    fetch('http://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_getAllSyns', { 
+    fetch('https://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_getAllSyns', { 
       method: 'get', 
       headers: {
           'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
