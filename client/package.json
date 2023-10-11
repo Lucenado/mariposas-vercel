@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "https://mariposas-vercel-api.vercel.app/",
   "devDependencies": {
     "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.2.1",
