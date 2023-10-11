@@ -1,0 +1,297 @@
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.carousel:hover {
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    transition-delay: 2s;
+}
+
+.image-displayer {
+    position: relative;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 0px 0px 7px #666;*/
+    box-shadow: 0px 0px 7px rgb(87, 53, 53);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.fullscreen {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.close-div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: ease-out 0.2s;
+}
+
+.close-div:hover {
+    box-shadow: 0 0 0.5rem #66666662;
+}
+
+.close-icon {
+    position: relative;
+    color: #fff;
+}
+
+.image {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fullscreen-enabled .image {
+    padding: 0;
+}
+
+.image-hidden {
+    display: none;
+}
+
+.arrow {
+    position: static;
+}
+
+.fullscreen-enabled .arrow {
+    position: static;
+    color: #fff;
+}
+
+.container-arrow {
+    display: flex;
+    position: absolute;
+    width: 5%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    transition-property: transform, background-color;
+    transition-delay: 2s, 0s;
+}
+
+.carousel:hover .container-arrow-left {
+    transform: translateX(2rem);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.carousel:hover .container-arrow-right {
+    transform: translateX(-2rem);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.container-arrow-left {
+    left: -2rem;
+}
+
+.fullscreen-enabled .container-arrow {
+    background-color: #00000048;
+    width: 2%;
+    height: 10%;
+   
+}
+
+.container-arrow:hover {
+    background-color: #66666662;
+    transition-delay: 0s;
+}
+
+.container-arrow:active {
+    background-color: #27252562;
+}
+
+.container-arrow-right {
+    right: -2rem;
+}
+
+.container-icon-fullscreen {
+    position: absolute;
+    right: -2rem;
+    bottom: 0rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    transition-delay: 2s;
+    transition-property: transform, font-size;
+    transition-delay: 2s, 0s;
+}
+
+.container-icon-fullscreen:hover {
+    font-size: 1.2rem;
+}
+
+.carousel:hover .container-icon-fullscreen {
+    transform: translateX(-2rem);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.carousel-display {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, 100px);
+    height: 110px;
+    max-height: 110px;
+    margin-top: 10px;
+    width: 600px;
+    border-radius: 0.5rem;
+    /*box-shadow: 0px 0px 3px rgba(71, 40, 40, 0.507);*/
+}
+
+.carousel-display.carousel-display-expanded {
+    grid-auto-flow: row;
+    width: auto;
+    height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+}
+
+.scroll {
+    overflow-x: auto;
+    transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+    -moz-transition-delay: 2s;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    .scroll {
+        background-color: rgba(0,0,0,0);
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .carousel:hover .scroll  {
+        background-color: #888;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+    
+    .scroll::-webkit-scrollbar {
+        height: 10px;
+        width: 5px;
+    }
+    
+    .scroll::-webkit-scrollbar-track {
+        display: flex;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .scroll::-webkit-scrollbar-thumb {
+        background-color: inherit;
+        border-radius: 5px;
+    }
+    
+    .scroll::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+.display-item {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.display-image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.display-item .display-image {
+    padding: 5px;
+    box-shadow: 0px 0px 7px rgb(87, 53, 53);
+    border-radius: 0.5rem;
+}
+
+.display-item .display-image:hover {
+    cursor: pointer;
+}
+
+.display-item .image-notselected {
+    box-shadow: 0px 0px 2px rgba(87, 53, 53, 0.938);
+}
+
+.display-item .image-notselected:hover {
+    box-shadow: 0px 0px 4px rgba(77, 48, 48, 0.877);
+}
+
+.container-expand-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-inline: 5px;
+    padding: 5px 0px;
+    box-shadow: 0px 0px 3px rgb(71, 40, 40);
+    background-color: rgb(241, 241, 241);
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.container-expand-icon .expand-icon {
+    -webkit-transition: -webkit-transform .2s ease;
+    -ms-transition: -ms-transform .2s ease;
+    transition: transform .2s ease;
+}
+
+.container-expand-icon.expanded .expand-icon {
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform .2s ease;
+    -ms-transition: -ms-transform .2s ease;
+    transition: transform .2s ease;
+}
+
+.container-expand-icon:hover {
+    background-color: rgba(143, 143, 143, 0.308)
+}
+
+.expand-icon {
+    padding: 2px 0px 4px 0px;
+}
+
+.container-expand-icon-none {
+    display: none;
+}

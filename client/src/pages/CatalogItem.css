@@ -1,0 +1,76 @@
+.catalog-item {
+    margin: 0 16rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.catalog-item-header {
+    grid-column: 1 / 3;
+    order: 1;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-item-back {
+    color: #000;
+    padding: 0.3rem 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: #b8b8b83a;
+    border-radius: 0 0px 10px 10px;
+}
+
+.catalog-item-back .back-arrow {
+    padding-top: 2px;
+}
+
+.catalog-item-back .back-text {
+    margin-left: 0.5rem;
+}
+
+.catalog-item-name {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.catalog-item-name span:first-of-type {
+    font-style: italic;
+
+}
+
+.catalog-carousel {
+    margin-top: 2rem;
+    width: fit-content;
+    order: 2;
+    grid-row: 2 / span 2;
+}
+
+.catalog-item-info {
+    margin-top: 2rem;
+    order: 3;
+}
+
+.catalog-map {
+    display: flex;
+    margin-top: 2rem;
+    height: 315px;
+    grid-column: 2;
+    grid-row: 3 / span 3;
+    order: 4;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-syns {
+    order: 5;
+    margin-top: 2rem;
+}
+
+.catalog-references {
+    order: 7;
+    margin-top: 2rem;
+    grid-column: 1 / 3;
+}

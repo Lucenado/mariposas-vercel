@@ -1,0 +1,127 @@
+.catalog {
+    margin: 0 15rem;
+}
+
+.catalog-up-btn {
+    display: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid var(--brown);
+    position: fixed;
+    right: 20px;
+    margin-top: 1rem;
+    top: 0;
+    cursor: pointer;
+}
+
+.catalog-up-btn.visible {
+    display: block;
+}
+
+.up-btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 55%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+}
+
+.catalog-title {
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+}
+
+
+.quick-search-span {
+    display: inline-flex;
+    position: relative;
+    height: 40px;
+}
+
+.quick-search-input {
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #dfdfdf;
+}
+
+.quick-search-input:focus {
+    outline: none;
+    border: 1px solid #dadada;
+}
+
+.quick-search-btn {
+    cursor: pointer;
+    padding: 0 0.7rem;
+    background-color: #dfdfdf;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.quick-search-btn:hover {
+    background-color: #dadada;
+}
+
+.quick-search-btn:active {
+    background-color: #cecece;
+}
+
+.filter-clear-btn {
+    position: absolute;
+    height: 40px;
+    right: -130px;
+    padding: 0 0.6rem;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.list-container {
+    padding: 1rem 0;
+}
+
+.list-records {
+    color: var(--brown);
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.list {
+    list-style: none;
+}
+
+.list-item {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    border-radius: 10px;
+    background-color: #f8f8f7;
+}
+
+.list-link {
+    display: flex;
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.list-text-italic {
+    font-style: italic;
+}
+
+@media screen and (max-width:1500px) {
+    .catalog {
+        margin: 0rem 2rem;
+    }
+}

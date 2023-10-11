@@ -1,0 +1,44 @@
+.container-refs {
+    min-height: 80px;
+    border: 1px solid var(--brown);
+    text-align: left;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+}
+
+.refs-title .title {
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.refs-title .title::after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: -4px;
+    left: 2px;
+}
+
+.refs-items {
+    margin-top: 0.6rem;
+}
+
+.refs-list {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.refs-item {
+    padding: 0.2rem 0;
+}
+
+.refs-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.refs-link:hover {
+    color: var(--green);
+}

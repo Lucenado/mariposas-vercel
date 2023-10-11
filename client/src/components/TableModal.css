@@ -1,0 +1,54 @@
+.table-modal-background {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.26);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 99;
+}
+
+.table-modal-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #000;
+    background-color: #fff;
+    height: max(20%, 100px);
+    width: max(10%, 150px);
+}
+
+.table-modal-header {
+    height: 50%;
+}
+
+.table-modal-actions {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.table-modal-actions span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table-modal-actions i {
+    color: #000;
+}
+
+.modal-cancel-btn:hover {
+    background-color: #fff0f0;
+    transition: background-color 0.3s ease;
+}
+
+.modal-confirm-btn:hover {
+    background-color: #e5ffe1;
+}

@@ -1,0 +1,89 @@
+.modals-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    width: 90%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
+    color: #000;
+}
+
+.collections-modal-container {
+    padding: 1rem;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.collections-modal-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    min-height: 5%;
+    margin-bottom: 1rem;
+}
+
+.collections-modal-header > * {
+    display: flex;
+    align-items: center;
+}
+
+.collections-modal-header .export-container {
+    justify-content: left;
+}
+
+.collections-modal-header .close-container .close-btn {
+    cursor: pointer;
+}
+
+.buttons-container .export-btn {
+    padding: 0.4rem 0.5rem;
+    color: #fff;
+    background-color: #30ad6e;
+    font-weight: bold;
+    transition: outline 0.3s ease;
+}
+
+.buttons-container .export-btn:hover {
+    background-color: #4daf7e;
+    outline: 1px solid #30ad6e;
+    transition: outline 0.3s ease;
+}
+
+.buttons-container .add-btn {
+    padding: 0.4rem 0.5rem;
+    color: #000;
+    box-shadow: inset 0 0 0 1px #ccc;
+    background-color: #f3f3f3;
+    transition: outline 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.buttons-container .add-btn:hover {
+   
+    outline: 1px solid #999999;
+    transition: outline 0.3s ease;
+}
+
+.collections-modal-header .close-container {
+    justify-content: right;
+}
+
+.spreadsheet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.remarks-container {
+    margin-top: 0.3rem;
+    text-align: left;
+    color: #800000;
+    height: min(5%, 22px);
+}

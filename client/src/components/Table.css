@@ -1,0 +1,143 @@
+.table-container {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    display: flex;
+    background-color: #e2e2e2;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #929292;
+    border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    padding-right: 1px;
+}
+
+.table thead {
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    background-color: #ccc;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+}
+
+.table th,
+.table td {
+    padding: 0.5rem;
+}
+
+.table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table tbody {
+    font-size: 0.9rem;
+}
+
+.table tbody input {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: inherit;
+    border: none;
+    outline: 1px solid #ccc;
+}
+
+.table tbody input:focus {
+    outline: 1px solid #9c9c9c;
+}
+
+.table tbody tr td span {
+    display: inline-block;
+}
+
+.table tbody tr {
+    background-color: #f1f1f1;
+    border-top: 0.5px solid #ddd;
+}
+
+.table tbody tr:hover {
+    background-color: #e7e7e7;
+}
+
+.table tbody tr:first-child {
+    border-top: none;
+}
+
+.table tbody tr:last-child {
+    text-align: left;
+}
+
+.table tbody th {
+    position: sticky;
+    right: 0;
+    background-color: #f7f7f7;
+    z-index: 1;
+}
+
+.table thead th:last-child {
+    position: sticky;
+    right: 0;
+    background-color: #dddddd;
+    z-index: 99;
+}
+
+.actions-th {
+    overflow: hidden;
+}
+
+.table-buttons span {
+    display: flex;
+    justify-content: space-around;
+}
+
+.table-buttons span i{
+    color: #000;
+    cursor: pointer;
+}
+
+.table-actions.inactive {
+    display: none !important;
+}
+
+.table-actions .delete-btn, 
+.table-edit-actions .cancel-btn {
+    color: #ff8c8c;
+}
+
+.table-edit-actions .confirm-btn {
+    color: var(--green);
+}
+
+.table-edit-actions.inactive {
+    display: none !important;
+}
+
+.add-collection-tr {
+    cursor: pointer;
+    color: #313131;
+}

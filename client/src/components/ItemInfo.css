@@ -1,0 +1,83 @@
+:root {
+    --green: #063100;
+    --brown: #633737;
+}
+
+.container-info {
+    background-color: #fff;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.item-info {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.item-info:first-child {
+    padding-top: 0;
+}
+
+.row-info {
+    display: flex;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+.row-info:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.row-info > * {
+    justify-content: center;
+}
+
+.info-title {
+    text-align: left;
+    flex-shrink: 0;
+    flex-basis: 35%;
+    font-weight: 600;
+    color: rgb(112, 112, 112) /*var(--brown)*/;
+}
+
+.info {
+    flex: 1;
+    text-align: right;
+}
+
+.container-buttons {
+    padding: 1rem 0;
+}
+
+.container-buttons button {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+
+    background:
+        linear-gradient(var(--brown),var(--brown)) 3px 1px,
+        linear-gradient(var(--brown),var(--brown)) 0 3px,
+        linear-gradient(var(--brown),var(--brown)) calc(100% - 3px) 0,
+        linear-gradient(var(--brown),var(--brown)) 0 calc(100% - 3px);
+    
+    background-size:1px 100%,100% 1px;
+    background-repeat:no-repeat;
+    transition: all 0.1s ease-out;
+}
+
+.container-buttons button:hover {
+    background:
+        linear-gradient(var(--brown),var(--brown)) 0 0,
+        linear-gradient(var(--brown),var(--brown)) 0 0,
+        linear-gradient(var(--brown),var(--brown)) 100% 0,
+        linear-gradient(var(--brown),var(--brown)) 0 100%;
+
+    background-size:2px 100%,100% 2px;
+    background-repeat:no-repeat;
+}
+
+.container-buttons button:last-child {
+    margin-left: 1rem;
+}
