@@ -23,7 +23,7 @@ function CatalogItem() {
   useEffect(() => {
 
     const fetchMain = () => {
-      return fetch(`http://localhost:8000/MainMoths/mainMoths_get/${id}`, { 
+      return fetch(`http://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_get/${id}`, { 
             method: 'get', 
             headers: {
                 'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -40,7 +40,7 @@ function CatalogItem() {
     };
 
     const fetchSyns = () => {
-      return fetch(`http://localhost:8000/MainMoths/mainMoths_getSyns/${id}`, { 
+      return fetch(`http://mariposas-vercel-api.vercel.app/MainMoths/mainMoths_getSyns/${id}`, { 
             method: 'get', 
             headers: {
                 'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -55,7 +55,7 @@ function CatalogItem() {
     location.state?.syns ? (location.state?.syns.includes(parseInt(id)) && fetchSyns()) : fetchSyns();
 
     const fetchImgs = () => {
-      return fetch(`http://localhost:8000/MothImgs/imageMoths_getSomeId/${id}`, { 
+      return fetch(`http://mariposas-vercel-api.vercel.app/MothImgs/imageMoths_getSomeId/${id}`, { 
         method: 'get', 
         headers: {
             'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -66,7 +66,7 @@ function CatalogItem() {
     };
 
     const fetchColls = () => {
-      return fetch(`http://localhost:8000/MothCollection/collectionMoths_filter_main/${id}`, { 
+      return fetch(`http://mariposas-vercel-api.vercel.app/MothCollection/collectionMoths_filter_main/${id}`, { 
         method: 'get', 
         headers: {
             'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -83,7 +83,7 @@ function CatalogItem() {
     };
 
     const fetchRefs = () => {
-      return fetch(`http://localhost:8000/MothRefs/refMoths_get/${id}`, { 
+      return fetch(`http://mariposas-vercel-api.vercel.app/MothRefs/refMoths_get/${id}`, { 
         method: 'get', 
         headers: {
             'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
@@ -95,7 +95,7 @@ function CatalogItem() {
 
     fetchImgs();
     fetchColls();
-    //fetchRefs();
+    fetchRefs();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
