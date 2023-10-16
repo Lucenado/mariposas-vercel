@@ -19,7 +19,7 @@ function ItemInfo({ mainData, collData}) {
 
   useEffect(() => {
     const fetchTypeData = () => {
-      collData.length > 0 ? collData.map((o) => (o.type !== "" && o.type !== null) && setTypeData(typeData => [...typeData, o])) : setTypeData([]);
+      collData && collData.length > 0 ? collData.map((o) => (o.type !== "" && o.type !== null) && setTypeData(typeData => [...typeData, o])) : setTypeData([]);
     };
 
     fetchTypeData();
