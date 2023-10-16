@@ -151,7 +151,7 @@ mainMoths_router.get("/mainMoths_getSpecies/:species", cache(2628288), auth,  (r
 // ve bicho da main baseado no id
 mainMoths_router.get("/mainMoths_get/:id", cache(2628288), auth,  (req, res) => {
 
-    var sql = "SELECT * FROM main WHERE id = ?"
+    var sql = "SELECT * FROM main WHERE id = $1"
     var params = [req.params.id]
 
     db_mariposa.query(sql, params, (err, result) => {
