@@ -19,7 +19,7 @@ const auth = require("../middleware/auth.js");
 // pega as referencias com base no id
 refMoths_router.get("/refMoths_get/:id", auth,  (req, res) => {
 
-    var sql = "SELECT * FROM references WHERE id_main = $1"
+    var sql = "SELECT * FROM \"references\" WHERE id_main = $1"
     var params = [req.params.id]
 
     db_mariposa.query(sql, params, (err, result) => {
