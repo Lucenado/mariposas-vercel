@@ -10,7 +10,7 @@ function ItemRefs({ data }) {
         </div>
         <div className='refs-items'>
           <ul className='refs-list'>
-            {data.map(ref => (
+            {data && data.map(ref => (
               <li key={ref.id} className='refs-item'>
                 <a className='refs-link' rel="noreferrer" href={ref.ref_link} target="_blank">{ref.ref}</a>
               </li>
