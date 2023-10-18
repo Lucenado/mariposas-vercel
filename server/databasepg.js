@@ -7,6 +7,8 @@ const pool = new Pool({
     max: 5,
 });
 
+//const client = await pool.connect()
+
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
     console.log(rows);
@@ -26,4 +28,4 @@ const pool = new Pool({
 })*/
 
 
-//module.exports = pool;
+module.exports = pool;
