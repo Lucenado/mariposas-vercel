@@ -42,6 +42,9 @@ mainMoths_router.get("/mainMoths_getAll", cache(2628288), auth,  (req, res) => {
         }
 
     });
+
+    db_mariposa.release();
+
 });
 
 // pega o id dos bichos sinonimos da main
@@ -70,6 +73,8 @@ mainMoths_router.get("/mainMoths_getAllSyns", cache(2628288), auth,  (req, res) 
         }
 
     });
+
+    db_mariposa.release();
 });
 
 // pega todos os dados dos bichos sinonimos da main baseado em id
@@ -175,6 +180,8 @@ mainMoths_router.get("/mainMoths_get/:id", cache(2628288), auth,  (req, res) => 
         }
 
     });
+
+    db_mariposa.release();
 });
 
 // register moth

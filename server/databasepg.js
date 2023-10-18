@@ -7,7 +7,12 @@ const pool = new Pool({
     max: 5,
 });
 
-//const client = await pool.connect()
+pool.on('error', (err, client) => {
+    console.error('Unexpected error on idle client', err)
+    process.exit(-1)
+  })
+
+await pool.connect();
 
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
