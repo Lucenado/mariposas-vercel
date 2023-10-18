@@ -22,22 +22,19 @@ const auth = require("../middleware/auth.js");
 // pega todas os bichos da Main (menos os sinonimos)
 mainMoths_router.get("/mainMoths_getAll", cache(2628288), auth,  (req, res) => {
 
-    db_mariposa.connect();
-
     var sql = "SELECT * FROM main WHERE syn_of IS NULL ORDER BY genus, id"
     var params = []
 
     db_mariposa.query(sql, params, (err, result) => {
 
         if (err) {
-            db_mariposa.release()
             
             res.status(400).json({"error":err.message});
             return;
 
         }
         else{
-            db_mariposa.release()
+            
             res.json({
                 "data":result.rows
             })
@@ -50,8 +47,6 @@ mainMoths_router.get("/mainMoths_getAll", cache(2628288), auth,  (req, res) => {
 // pega o id dos bichos sinonimos da main
 mainMoths_router.get("/mainMoths_getAllSyns", cache(2628288), auth,  (req, res) => {
 
-    db_mariposa.connect();
-
     var sql = "SELECT syn_of FROM main WHERE syn_of IS NOT NULL"
     var params = []
     var data = []
@@ -59,14 +54,12 @@ mainMoths_router.get("/mainMoths_getAllSyns", cache(2628288), auth,  (req, res) 
     db_mariposa.query(sql, params, (err, result) => {
 
         if (err) {
-            db_mariposa.release()
             
             res.status(400).json({"error":err.message});
             return;
 
         }
         else{
-            db_mariposa.release()
             result.rows.forEach((row) => {
                 data.push(row.syn_of)
             })

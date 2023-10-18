@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const pool = new Pool({
     connectionString: process.env.CONNECTION_STRING,
-    max: 5,
+    max: 3,
 });
 
 pool.on('error', (err, client) => {
