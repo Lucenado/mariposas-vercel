@@ -15,7 +15,7 @@ function ModalDesc({ setDescModalOpen, id }) {
 
     const fetchDescImg = () => {
 
-      fetch(`http://mariposas-vercel-api.vercel.app/MothImgs/imageMoths_getSomeType/${id}/1`, { 
+      fetch(`https://mariposas-vercel-api.vercel.app/MothImgs/imageMoths_getSomeType/${id}/1`, { 
         method: 'get', 
         headers: {
             'my_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicGVkcm9sdWNlbmFkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQ4NzYwODJ9.qt-zB7qLuhUY1xc2XwjQNdNBHc2zR7B3SnTD_z_htcg'
