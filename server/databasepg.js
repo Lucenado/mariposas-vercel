@@ -4,7 +4,13 @@ require('dotenv').config();
 
 const pool = new Pool({
     connectionString: process.env.CONNECTION_STRING,
-})
+    max: 5,
+});
+
+(async () => {
+    const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
+    console.log(rows);
+})();
 
 /*const pool = new Pool({
     user: "postgres",
@@ -20,4 +26,4 @@ const pool = new Pool({
 })*/
 
 
-module.exports = pool;
+//module.exports = pool;
