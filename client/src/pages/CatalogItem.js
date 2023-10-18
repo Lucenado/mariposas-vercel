@@ -99,12 +99,6 @@ function CatalogItem() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
-
-  console.log(mothMain);
-  console.log(mothSyns);
-  console.log(mothImgs);
-  console.log(mothColls);
-  console.log(mothRefs);
   
   return (
     <div className='catalog-item'>
