@@ -12,8 +12,6 @@ pool.on('error', (err, client) => {
     process.exit(-1)
   })
 
-await pool.connect();
-
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
     console.log(rows);
