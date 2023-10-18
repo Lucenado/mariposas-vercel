@@ -7,10 +7,10 @@ const pool = new Pool({
     max: 5,
 });
 
-(async () => {
+/*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
     console.log(rows);
-})();
+})();*/
 
 /*const pool = new Pool({
     user: "postgres",
