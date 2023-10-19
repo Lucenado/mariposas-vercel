@@ -14,9 +14,8 @@ pool.connect((err, client) => {
     } else {
       console.log('Connected to the database');
     }
+    pool.end();
 });
-
-pool.release();
 
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
