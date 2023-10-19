@@ -4,7 +4,9 @@ require('dotenv').config();
 
 const pool = new Pool({
     connectionString: process.env.CONNECTION_STRING,
-    max: 2,
+    max: 5,
+    min: 2,
+    idleTimeoutMillis: 1000 //close idle clients after 1 second
 });
 
 pool.on('error', (err, client) => {
