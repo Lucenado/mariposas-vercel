@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const pool = new Pool({
     connectionString: process.env.CONNECTION_STRING,
-    max: 1,
+    max: 3,
     idleTimeoutMillis: 1000 //close idle clients after 1 second
 });
 
@@ -15,6 +15,8 @@ pool.connect((err, client) => {
       console.log('Connected to the database');
     }
 });
+
+pool.release();
 
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
