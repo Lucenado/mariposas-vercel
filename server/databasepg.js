@@ -8,10 +8,13 @@ const pool = new Pool({
     idleTimeoutMillis: 1000 //close idle clients after 1 second
 });
 
-pool.on('error', (err, client) => {
-    console.error('Unexpected error on idle client', err)
-    process.exit(-1)
-  })
+pool.connect((err, client) => {
+    if (err) {
+      console.error('Error connecting to the database', err);
+    } else {
+      console.log('Connected to the database');
+    }
+});
 
 /*(async () => {
     const {rows} = await pool.query('SELECT $1 AS food', ['pizza'])
